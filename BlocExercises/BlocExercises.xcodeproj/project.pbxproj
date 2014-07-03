@@ -100,6 +100,7 @@
 		931AB0A21945060D00B4FB76 = {
 			isa = PBXGroup;
 			children = (
+				93BDE6AD194A6B3F00F2DE30 /* Unit Testing */,
 				931AB0B61945063500B4FB76 /* BlocExercises */,
 				931AB0AF1945063500B4FB76 /* Frameworks */,
 				931AB0AE1945063500B4FB76 /* Products */,
@@ -127,7 +128,6 @@
 		931AB0B61945063500B4FB76 /* BlocExercises */ = {
 			isa = PBXGroup;
 			children = (
-				93BDE6AD194A6B3F00F2DE30 /* Unit Testing */,
 				931AB0C81946478E00B4FB76 /* Number Variables */,
 				931AB0CE1946606400B4FB76 /* Strings and String Formatting */,
 				931AB0C21945080300B4FB76 /* If / Else Statements and the Ternary Operator */,
@@ -240,6 +240,7 @@
 				93BDE6B3194A6D3F00F2DE30 /* WizardOfOzTests.m */,
 			);
 			name = "Unit Testing";
+			path = BlocExercises;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
