@@ -16,13 +16,27 @@
     return fullSentence;
 
 }
-
+/*
+- (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
+    NSString *sentenceToCut = @"Monterey Jack cheese";
+    NSString *nowySring = [sentenceToCut stringByReplacingOccurrencesOfString:@" cheese" withString:@""];
+    return nowySring;
+}
+ */
+/*
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
     
     NSString *nowySring = [cheeseName stringByReplacingOccurrencesOfString:@" cheese" withString:@""];
-    nowySring = [cheeseName stringByReplacingOccurrencesOfString:@" Cheese" withString:<#(NSString *)#>]
+    nowySring = [cheeseName stringByReplacingOccurrencesOfString:@" Cheese" withString:@""];
     return nowySring;
 }
+ */
+- (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
+
+    NSRange cheeseRange = [cheeseName rangeOfString:@" cheese" options:NSCaseInsensitiveSearch];
+    NSString *result = [cheeseName stringByReplacingCharactersInRange:cheeseRange withString:@""];
+    return result;
+};
 
 - (NSString *) numberOfCheesesStringWithCheeseCount:(NSUInteger)cheeseCount {
    if(cheeseCount == 1)
