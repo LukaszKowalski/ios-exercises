@@ -25,7 +25,7 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
-    self.worf = @"Worf, son of Mogh, slayer of Gowron";
+    self.worf = @"worf, son of Mogh, slayer of Gowron";
     self.picard = @"Captain Jean-Luc Picard of the USS Enterprise";
     self.crusher = @"Beverly Crusher, Chief Medical Officer";
 

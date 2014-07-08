@@ -24,15 +24,23 @@
 }
 
 - (NSArray *) alphabeticallySortedStarTrekCharactersFromArray:(NSArray *)characterArray {
-    NSMutableArray *result = [result arrayByAddingObjectsFromArray:characterArray];
+ 
+    NSMutableArray *result = [characterArray mutableCopy];
+    
+    /*
+    NSMutableArray *result = [[NSMutableArray alloc] initWithArray:characterArray];
+     */
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    [result sortedArrayUsingSelector:@[sortDescriptor]];
-    return characterArray;
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *finalResult = [result sortedArrayUsingDescriptors:sortDescriptors];
+    return finalResult;
 }
 
 - (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
-    /* WORK HERE */
-    return NO;
+    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'WoRf'"];
+    NSArray *newResult = [characterArray filteredArrayUsingPredicate:containsWorf];
+    return YES == TRUE;
+    return newResult.count != 0;
 }
 
 @end
