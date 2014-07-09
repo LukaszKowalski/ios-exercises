@@ -31,8 +31,8 @@
     NSMutableArray *result = [[NSMutableArray alloc] initWithArray:characterArray];
      */
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    NSArray *finalResult = [result sortedArrayUsingDescriptors:sortDescriptors];
+//    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *finalResult = [result sortedArrayUsingDescriptors:@[sortDescriptor]];
     return finalResult;
 }
 
