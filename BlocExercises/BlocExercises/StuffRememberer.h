@@ -8,7 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface StuffRememberer : NSObject
+@interface StuffRememberer : NSObject {
+    //NSMutableArray *array;
+}
+
+//-(void)setArray:(NSMutableArray *)array;
+//-(NSMutableArray *)array;
+
+@property (nonatomic, strong) NSMutableArray *array;
+@property (nonatomic, copy) NSMutableArray *arrayToCopy;
+@property  (assign) float someFloat;
 
 /*
  
